@@ -1,81 +1,109 @@
-Access at: https://kaylew1421.github.io/Patient-Dashboard-CT/
+# 🩺 Patient Dashboard
 
-# Patient Dashboard
+**Live Demo:** https://kaylew1421.github.io/Patient-Dashboard-CT/
 
-A responsive web application to display and manage patient data including vitals, diagnostics, lab results, and medical history. Built with HTML, CSS, JavaScript, and Chart.js.
+---
 
-## Features
+## 🎯 What is this project?
 
-- Responsive grid layout with sidebar, top navigation, main content, and right sidebar.
-- Dynamic patient list with profile pictures and basic info.
-- Clickable patient list to load detailed patient overview.
-- Overview includes vital signs widgets (respiratory rate, temperature, heart rate).
-- Interactive blood pressure history chart using Chart.js.
-- Diagnostic list table showing problem, description, and status.
-- Lab results list with downloadable icons.
-- Multiple tabs: Overview, Patients, Schedule, Messages, Transactions (placeholder content).
-- User-friendly UI with hover states and active menu highlighting.
-- Fetches live patient data from a secured API endpoint.
+This responsive web application displays and manages **patient data**, including vitals, diagnostics, lab results, and medical history.  
+It demonstrates my skills in:
 
-## Technologies Used
+✅ Responsive web design 
 
-- HTML5 & CSS3 (Flexbox, CSS Grid)
-- JavaScript (ES6+)
-- Chart.js (for charts)
-- Fetch API for data retrieval
+✅ Interactive data-driven UI with Chart.js  
 
-## Installation
+✅ Fetching and rendering live API data  
 
-1. Clone the repository:
+✅ Clean, user-friendly UI/UX  
 
-   ```bash
-   git clone https://github.com/yourusername/patient-dashboard.git
-   cd patient-dashboard
-2. Open index.html in your preferred web browser.
+---
 
-3. Ensure you have an internet connection to load Chart.js from CDN.
+## 🚀 Features Explained
 
-  ## Usage
-  
--The app loads patient data automatically on page load.
+| Feature                           | Explanation |
+|-----------------------------------|-------------|
+| 📋 **Patient List Sidebar**       | Dynamic list with profile pictures and basic info. |
+| 👤 **Patient Overview Panel**     | Displays selected patient's vitals, diagnostics, charts, and lab results. |
+| 💓 **Vitals Widgets**            | Respiratory rate, temperature, and heart rate widgets with live data. |
+| 📈 **Blood Pressure Chart**      | Interactive blood pressure history chart using Chart.js. |
+| 🧪 **Diagnostics Table**         | Table showing problems, descriptions, and statuses. |
+| 🔬 **Lab Results List**          | Lab results with downloadable icons. |
+| 🗂️ **Tabs Navigation**           | Overview, Patients, Schedule, Messages, Transactions (with placeholder content). |
+| ✨ **User-Friendly UI**           | Hover states, active menu highlighting, and responsive layout. |
 
--Use the left sidebar or the Patients tab to select a patient.
+---
 
--The Overview tab displays detailed vitals, diagnostics, and charts for the selected patient.
-
--Navigate other tabs to see placeholder content for Schedule, Messages, and Transactions.
-
-## API Credentials
-The app uses basic auth to fetch patient data from the API:
-
-Username: coalition
-Password: skills-test
-
-These are hardcoded in the JS file for demo purposes.
-
-## Project Structure
+## 📂 Project Structure
 
 patient-dashboard/
 
-├── assets/                # Images and icons
+├── assets/ # Images and icons
 
-├── index.html             # Main HTML file
+├── index.html # Main HTML file
 
-├── styles.css             # Stylesheet
+├── styles.css # Stylesheet
 
-├── script.js              # JavaScript logic
+├── script.js # JavaScript logic
 
-└── README.md              # This documentationContributing
-
-
-## Contributing
-Feel free to fork the repository and submit pull requests for improvements or bug fixes.
-
-## License
-This project is open source and available under the MIT License. 
+└── README.md # This documentation
 
 
+---
 
-Made with ❤️ by Kayla Lewis
+## 🛠️ Technologies Used
+
+- **HTML5 & CSS3** — responsive layout with Flexbox and CSS Grid
+- **Vanilla JavaScript (ES6+)** — DOM manipulation and Fetch API
+- **Chart.js** — for blood pressure history charts
+- **Git & GitHub** — version control & hosting
+
+----
 
 
+## 🧪 How it Works
+
+✅ The app automatically loads patient data on page load.
+
+✅ Use the left sidebar or the Patients tab to select a patient.
+
+✅ The Overview tab shows detailed vitals, diagnostics, and charts for the selected patient.
+
+✅ Other tabs (Schedule, Messages, Transactions) display placeholder content.
+
+----
+
+## 🔐 API Credentials
+This app fetches live patient data from a secured API using basic authentication:
+
+Username: coalition
+
+Password: skills-test
+
+These credentials are hardcoded in the script.js file for demonstration purposes.
+
+----
+
+## 🚧 Future Improvements
+
+✨ Add patient editing and management functionality.
+
+✨ Improve accessibility for screen readers and keyboard navigation.
+
+✨ Add search and filtering features to patient list.
+
+✨ Store patient data securely and implement authentication.
+
+----
+
+## 🤝 Contributing
+Feel free to fork the repository and submit pull requests for improvements, enhancements, or bug fixes!
+
+## 📄 License
+This project is open source and available under the MIT License.
+See the LICENSE file for details.
+
+
+
+
+## Made with ❤️ by Kayla Lewis
