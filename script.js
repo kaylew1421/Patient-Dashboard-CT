@@ -24,7 +24,7 @@ async function fetchPatientData() {
     renderPatientsList(patients);
     renderPatientsTabList(patients);
 
-    currentPatient = patients.find(p => p.name.toLowerCase() === 'jessica taylor') || patients[0];
+    currentPatient = patients[0];
     updateOverview(currentPatient);
 
   } catch (error) {
@@ -38,11 +38,13 @@ function renderPatientsList(patients) {
   const listEl = document.getElementById('patients-list');
   listEl.innerHTML = '';
 
-  const filteredPatients = patients.filter(p => p.name.toLowerCase() === 'jessica taylor');
-
-  filteredPatients.forEach(patient => {
+  patients.forEach(patient => {
     const li = document.createElement('li');
-    li.classList.add('active');
+
+    // Only add 'active' class if currentPatient matches
+    if (currentPatient && currentPatient.id === patient.id) {
+      li.classList.add('active');
+    }
 
     const img = document.createElement('img');
     img.classList.add('patient-pic');
@@ -82,10 +84,6 @@ function renderPatientsList(patients) {
 
     listEl.appendChild(li);
   });
-
-  if (filteredPatients.length === 0) {
-    listEl.innerHTML = '<li>No patient named Jessica Taylor found.</li>';
-  }
 }
 
 // Patients list (tab)
@@ -93,9 +91,7 @@ function renderPatientsTabList(patients) {
   const listEl = document.getElementById('patients-list-tab');
   listEl.innerHTML = '';
 
-  const filteredPatients = patients.filter(p => p.name.toLowerCase() === 'jessica taylor');
-
-  filteredPatients.forEach(patient => {
+  patients.forEach(patient => {
     const li = document.createElement('li');
     li.textContent = patient.name;
     li.addEventListener('click', () => {
@@ -104,10 +100,6 @@ function renderPatientsTabList(patients) {
     });
     listEl.appendChild(li);
   });
-
-  if (filteredPatients.length === 0) {
-    listEl.innerHTML = '<li>No patient named Jessica Taylor found.</li>';
-  }
 }
 
 // Update overview panel
@@ -288,5 +280,5 @@ document.querySelectorAll('.top-menu li').forEach(tab => {
   });
 });
 
-// Start
+// Start fetching data
 fetchPatientData();
