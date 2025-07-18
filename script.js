@@ -46,7 +46,7 @@ function renderPatientsList(patients) {
 
     const img = document.createElement('img');
     img.classList.add('patient-pic');
-    img.src = patient.profile_picture || '../assets/profile_pic.png';
+    img.src = patient.profile_picture || './assets/profile_pic.png';
     img.alt = patient.name;
 
     const detailsDiv = document.createElement('div');
@@ -116,7 +116,7 @@ function updateOverview(patient) {
   currentPatient = patient;
 
   const img = document.getElementById('profile-pic');
-  img.src = patient.profile_picture || '../assets/profile_pic.png';
+  img.src = patient.profile_picture || './assets/profile_pic.png';
   img.alt = `${patient.name} Profile Picture`;
 
   document.getElementById('patient-main-name').textContent = patient.name;
@@ -263,7 +263,7 @@ function updateLabResults(patient) {
       li.textContent = result;
 
       const icon = document.createElement('img');
-      icon.src = '../assets/download.jpg';
+      icon.src = './assets/download.jpg';
       icon.alt = 'Download';
       icon.classList.add('download-icon');
       li.appendChild(icon);
